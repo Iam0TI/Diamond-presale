@@ -53,6 +53,16 @@ library LibDiamond {
         bytes32 merkleRoot;
         // a mapping to keep track of the Mint state of a particular address
         mapping(address => bool) mintCheckList;
+        // Token name
+        string _name;
+        // Token symbol
+        string _symbol;
+        // index
+        uint256 index;
+        mapping(uint256 tokenId => address) _owners;
+        mapping(address owner => uint256) _balances;
+        mapping(uint256 tokenId => address) _tokenApprovals;
+        mapping(address owner => mapping(address operator => bool)) _operatorApprovals;
     }
 
     function diamondStorage() internal pure returns (DiamondStorage storage ds) {
