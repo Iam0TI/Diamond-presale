@@ -6,5 +6,5 @@ libs = [
 ]
 ffi=true
 verbosity=5
-
+fs_permissions = [{ access = "read", path = "./script" }]
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config

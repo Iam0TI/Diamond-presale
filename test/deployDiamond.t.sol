@@ -9,8 +9,9 @@ import "../contracts/facets/MerkleFacet.sol";
 import "../contracts/Diamond.sol";
 
 import "./helpers/DiamondUtils.sol";
+import "./helpers/GetProof.sol";
 
-contract DiamondDeployer is DiamondUtils, IDiamondCut {
+contract DiamondDeployer is DiamondUtils, IDiamondCut, GetProof {
     //contract types of facets to be deployed
     Diamond diamond;
     DiamondCutFacet dCutFacet;
@@ -61,6 +62,9 @@ contract DiamondDeployer is DiamondUtils, IDiamondCut {
 
         //call a function
         DiamondLoupeFacet(address(diamond)).facetAddresses();
+
+        bytes32[] memory proofArray = getProof(address(1));
+        // logBytes32Array(proofArray[1]);
     }
 
     function diamondCut(FacetCut[] calldata _diamondCut, address _init, bytes calldata _calldata) external override {}

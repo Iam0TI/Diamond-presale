@@ -12,7 +12,7 @@ contract MerkleFacet is ERC721PresaleFacet {
 
     event MintedNft(address indexed nftContract, address indexed to, uint256 indexed tokenId);
 
-    uint256 public constant NFT_PRICE = 0.01 ether;
+    uint256 public constant NFT_PRICE = 0.034 ether;
     // Number of NFTs per 1 ETH
     uint256 public constant NFTS_PER_ETHER = 30;
 
@@ -24,12 +24,11 @@ contract MerkleFacet is ERC721PresaleFacet {
 
         // verifing   the proof
         _verifyProof(proof, msg.sender);
-
+        require(msg.value >= NFT_PRICE, IncorrectEthSent());
         // Calculate the number of NFTs to mint based on the ETH sent
-        uint256 numNfts = msg.value * NFTS_PER_ETHER / 1 ether;
+        uint256 numNfts = (msg.value * NFTS_PER_ETHER) / 1 ether;
 
         //a minimum of 0.01 ETH is sent
-        require(msg.value >= NFT_PRICE, IncorrectEthSent());
 
         // set status to  Minted
         l.mintCheckList[msg.sender] = true;
@@ -40,6 +39,11 @@ contract MerkleFacet is ERC721PresaleFacet {
             _safeMint(msg.sender, l.index + i);
             emit MintedNft(address(this), msg.sender, l.index + i);
         }
+    }
+
+    function merkleRoot() external view returns (bytes32) {
+        LibDiamond.DiamondStorage storage l = LibDiamond.diamondStorage();
+        return l.merkleRoot;
     }
 
     function updateMerkleRoot(bytes32 _newMerkleroot) external {

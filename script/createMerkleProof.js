@@ -12,14 +12,15 @@ function generateProof(address) {
       // Generate the proof for the given index
       const proof = tree.getProof(i);
       return {
-        value: v,
         proof: proof,
       };
     }
   }
 
-  // If the address is not found, throw an error
-  throw new Error(`Address ${address} not found in Merkle tree`);
+  // If the address is not found, return emepty object
+  return {
+        proof: "",
+      };
 }
 
 module.exports = { generateProof };
