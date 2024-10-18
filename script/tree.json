@@ -1,0 +1,82 @@
+{
+ "format": "standard-v1",
+ "leafEncoding": [
+  "address",
+  "uint256"
+ ],
+ "tree": [
+  "0x3d68063a6009f586b121c2a38882c78e87213cd48d887d23f5b29c5dab94e42e",
+  "0x86e74c51c050626d1c85439500ffaf5ed3d20acff22081c61276d8349fa2f7fd",
+  "0x4849afdd0adc42da406fdc6ce8853aa3c34abdf1271b81c588d3f1cd46937684",
+  "0x8b82c7784b86649c128231fb46c01bf9f0bc1034340681b6a66580e8954823f9",
+  "0x40112764f872edd111d31e3face913e305aad6c57a576e331d5a2a501cc241e2",
+  "0xd273945d5ea3533b09e86b49bbf7b7465721735572e1d13f5a8869d98f601b77",
+  "0x0f238104c4a4b36c4bcfe15c07197b8067f27ad78b44e1c0ba1ee4729c00a41d",
+  "0xfd122586af800bf8fb7d2f74a321052d073d888d78df9bc3f0fba5dc5eb3b929",
+  "0xf5a504dee60c8405f38592b62a118304c80afd6d40a28e118b219ff8b0d67d77",
+  "0xced8e2481dabb2b0a0948eddb654cc45ea5961093961205c71ae8a3e87bc3380",
+  "0xc9233552994a4dc1406f4c19a06676cc6f17612aaccbc10478e2e6d1852b9cdc",
+  "0x965f0590ca74fe239f26075a15a17b297492d4ed22d74041e7c492dc6999f2cd",
+  "0x78c54e2f393f42ca15fc634c0bf5e847ca86b0a0ee2d18e1582e838ccf09c7b9",
+  "0x457aa17fe0228467c8ff03c94ef937caf43d83d6102043300dc6a2e9a13a7006",
+  "0x38c66d601fe16b9fc8fde6ac3b2cc0a9f85e477da212128e96ae989dbd3a39d1"
+ ],
+ "values": [
+  {
+   "value": [
+    "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+    "1"
+   ],
+   "treeIndex": 13
+  },
+  {
+   "value": [
+    "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+    "2"
+   ],
+   "treeIndex": 9
+  },
+  {
+   "value": [
+    "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+    "3"
+   ],
+   "treeIndex": 7
+  },
+  {
+   "value": [
+    "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+    "4"
+   ],
+   "treeIndex": 8
+  },
+  {
+   "value": [
+    "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+    "5"
+   ],
+   "treeIndex": 11
+  },
+  {
+   "value": [
+    "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+    "6"
+   ],
+   "treeIndex": 10
+  },
+  {
+   "value": [
+    "0xa0Ee7A142d267C1f36714E4a8F75612F20a79720",
+    "7"
+   ],
+   "treeIndex": 12
+  },
+  {
+   "value": [
+    "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+    "8"
+   ],
+   "treeIndex": 14
+  }
+ ]
+}
