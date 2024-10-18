@@ -17,7 +17,7 @@ contract MerkleFacet is ERC721PresaleFacet {
     uint256 public constant NFTS_PER_ETHER = 30;
 
     // /* ========== Mutation Functions ========== */
-    function mint(bytes32[] calldata proof) external payable {
+    function mintPresale(bytes32[] calldata proof) external payable {
         LibDiamond.DiamondStorage storage l = LibDiamond.diamondStorage();
         // check if already Minted
         require(l.mintCheckList[msg.sender] == false, AlreadyMinted());

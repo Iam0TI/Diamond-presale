@@ -2,7 +2,7 @@ const { StandardMerkleTree } = require("@openzeppelin/merkle-tree");
 const fs = require("fs");
 const { values } = require("./airdrop_list");
 
-const tree = StandardMerkleTree.of(values, ["address", "uint256"]);
+const tree = StandardMerkleTree.of(values, ["address"]);
 
 // (3) Output the Merkle root
 console.log("Merkle Root:", tree.root);
